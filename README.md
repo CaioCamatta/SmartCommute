@@ -35,10 +35,11 @@ Caio and Matthew
 
 ## Videos
 #### Before
-![](/before.gif)
+![](/demo/before.gif)
 
 #### After
-![](/after.gif)
+![](demo/after.gif)
 
-![](/Maps Flow.jpg)
-![](/CityOfLondonWebsite.jpg
+![](/imgs/https://github.com/CaioCamatta/SmartCommute/blob/master/imgs/74572859_741480603013835_4439537402716880896_n.png.jpg)
+
+![](imgs/https://github.com/CaioCamatta/SmartCommute/blob/master/imgs/78730373_1024251991256961_838824172518899712_n.png)
