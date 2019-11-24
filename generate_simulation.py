@@ -6,9 +6,8 @@ import mlrose
 
 from simulate import simulate
 
-
 def main():
-    time_values = np.array([2,0])
+    time_values = np.array([24,13])
 
     avg = simulate(time_values, shouldSave=True)
     

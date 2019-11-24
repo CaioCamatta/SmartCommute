@@ -7,8 +7,8 @@ import mlrose
 from simulate import simulate
 
 def main():
-    
-    # try mlrose shit 
+
+    # mlrose  
 
     fitness_cust = mlrose.CustomFitness(simulate)
 
@@ -23,14 +23,10 @@ def main():
                                                       max_attempts = 10, max_iters = 100,
                                                       init_state = init_state, random_state = 1)
 
-
     print("Best time values:")
     print(best_time_values)
 
     print("Best avg time:")
     print(best_avg_time)
-
-
-
 
 main()
