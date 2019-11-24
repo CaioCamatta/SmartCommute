@@ -11,19 +11,19 @@ We picked an intersection next to where we live (*Oxford St W & Wharncliffe Rd N
 
 Average number of cars stopped at any given time *before* optimizing: 3.22088 (first gif)
 Average number of cars stopped at any given time *after* optimizing: 1.653533 (second gif)
-Improvement: about *96.9%*.
+Improvement: about **96.9%**.
 
-## How I built it
+## How We built it
 We used and modified an open-source implementation of the simulator, called CityFlow, using a docker container. There, we create our own model for an intersection similar to the one we live nearby. 
 The optimizer and gradients were created in python using machine learning (scikit-learn) using auxiliary libraries from calculating gradients.
 
-## Challenges I ran into
+## Challenges We ran into
 Creating the *reinforcement learning model* was definitely the hardest challenge. We didn't have that much experience so we struggled. But in the end, we manage to create a solution that worked, so we are proud of that.
 
-## Accomplishments that I'm proud of
+## Accomplishments that We're proud of
 We are proud of having finished a hack that can be used in real life by cities.
 
-## What I learned
+## What We learned
 We learned how to use docker, improve our c++ and python knowledge, and had fun working as a team.
 
 ## What's next for SmartCommute
