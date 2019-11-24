@@ -7,11 +7,12 @@ import mlrose
 from simulate import simulate
 
 def main():
+    
     # try mlrose shit 
 
     fitness_cust = mlrose.CustomFitness(simulate)
 
-    problem = mlrose.DiscreteOpt(fitness_fn=fitness_cust, maximize=False, length=2, max_val = 35)
+    problem = mlrose.DiscreteOpt(fitness_fn=fitness_cust, maximize=False, length=2, max_val = 30)
 
 
     schedule = mlrose.ExpDecay()
@@ -30,8 +31,6 @@ def main():
     print(best_avg_time)
 
 
-    with open("./out/out.txt", "wt") as fout:
-        fout.write("Best Values: " + str(best_time_values) +'\n')
-        fout.write("Best Time: " + best_avg_time + '\n')
+
 
 main()

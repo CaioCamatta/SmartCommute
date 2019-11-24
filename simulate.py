@@ -3,6 +3,7 @@ import re
 import numpy as np 
 from scipy import optimize
 import mlrose
+import gc
 
 
 STEPS = 500
@@ -49,9 +50,18 @@ def simulate1(time_values, shouldSave=False):
     totals = {}
     averages = {}
 
-    # expecting time _values tp be 2 long
-    time_values = time_values + 5
-    time_values = time_values.tolist() * 20
+    #expecting time _values tp be 2 long
+    print(time_values)
+    time_values = time_values.tolist()
+    time_values[0] = time_values[0] + 20 
+    time_values[1] = time_values[1] + 3
+    print(time_values)  
+    time_values = time_values* 20
+    # print("------------------------------------")
+    # print(time_values)
+    # for i in range(len(time_values)):
+    #     if i%2=0:
+            
 
     
     print("Simulating with:")
@@ -61,7 +71,7 @@ def simulate1(time_values, shouldSave=False):
     
     eng = None
     if (shouldSave):
-         eng = cityflow.Engine("./configs/config_save.json", thread_num=1)
+         eng = cityflow.Engine("./configs/config.json", thread_num=1)
     else:
         eng = cityflow.Engine("./configs/config_no_save.json", thread_num=1)
    
@@ -76,10 +86,12 @@ def simulate1(time_values, shouldSave=False):
     calculateAverages(totals, averages, count)
 
     total_avg_time =  calculateTotalAverage(averages)
-    print("calculated total avg time. ")
+    print("calculated total avg time. " + str(total_avg_time))
+    
     return total_avg_time
 
 def simulate(x, y=False):
+    gc.collect()
     print("calling simulate")
     v =  simulate1(x, y)
     print("done calling, now returning")
