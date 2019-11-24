@@ -44,12 +44,13 @@ def create_file(time_values):
 
 
 
-def simulate(time_values, shouldSave=False):
+def simulate1(time_values, shouldSave=False):
     count = 0
     totals = {}
     averages = {}
 
     # expecting time _values tp be 2 long
+    time_values = time_values + 5
     time_values = time_values.tolist() * 20
 
     
@@ -75,5 +76,11 @@ def simulate(time_values, shouldSave=False):
     calculateAverages(totals, averages, count)
 
     total_avg_time =  calculateTotalAverage(averages)
-    print("calculated total avg time: " + str(total_avg_time))
+    print("calculated total avg time. ")
     return total_avg_time
+
+def simulate(x, y=False):
+    print("calling simulate")
+    v =  simulate1(x, y)
+    print("done calling, now returning")
+    return v
